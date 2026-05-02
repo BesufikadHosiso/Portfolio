@@ -1,0 +1,7 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* Any global base styles not handled by Tailwind */
+body {
+  @apply bg-dark text-text-primary transition-colors duration-300;
+}

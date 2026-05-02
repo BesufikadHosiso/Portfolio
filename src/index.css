@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@import 'tailwindcss';
+
+/* Custom Theme Configuration */
+@theme {
+    /* Colors */
+    --color-primary: #D7F5BB; /* Primary accent */
+    --color-primary-light: #E6FFC4; /* Button hover */
+    --color-primary-dark: #C4E6A9;
+    --color-secondary: #054431; /* Secondary accent */
+    --color-secondary-light: #065A42;
+    --color-secondary-dark: #043A2E;
+    --color-accent: #D7F5BB; /* Same as primary for consistency */
+    --color-accent-light: #E6FFC4;
+    --color-accent-dark: #C4E6A9;
+    --color-dark: #021C16; /* Page background */
+    --color-dark-light: #05382C; /* Surface */
+    --color-dark-lighter: #1F5A48; /* Borders */
+    --color-text-primary: #F0FEE5; /* Heading text */
+    --color-text-secondary: #D4E6CA; /* Body text */
+    --color-text-muted: #8AA884; /* Subtle text */
+
+    /* Font Family */
+    --font-sans: 'Inter', sans-serif;
+
+    /* Animations */
+    --animate-float: float 6s ease-in-out infinite;
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+}
+
+/* Base Styles */
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--color-dark);
+        color: var(--color-text-primary);
+        overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--color-dark-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary-light);
+    }
+}
+
+/* Component Styles */
+@layer components {
+    .gradient-border {
+        position: relative;
+    }
+
+    .gradient-border::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        padding: 1px;
+        background: linear-gradient(135deg, var(--color-primary), #FFB084);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    .rim-light {
+        box-shadow: 0 0 0 3px var(--color-primary), 0 0 0 8px rgba(255, 113, 84, 0.2);
+    }
+}
