@@ -1,9 +1,11 @@
+import projectShow from '../../assets/adelphosHome.webm';
+
 export const projects = [
     {
         id: 1,
         title: "Adelphos High School",
         role: "Frontend Developer (with backend integration)",
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+        image: projectShow,
         tech: ["React", "Tailwind CSS", "FormSubmit", "Responsive Design"],
         description: "A comprehensive information platform for Adelphos High School students and alumni. Features include event calendars, school announcements, contact section with feedback submission directly to school email, and easy navigation for both current and former students. Built with React and Tailwind CSS, integrated FormSubmit for seamless email handling without a backend server.",
         features: [

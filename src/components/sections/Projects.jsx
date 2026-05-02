@@ -3,40 +3,41 @@ import { ScrollReveal } from '../ui/ScrollReveal';
 import { ProjectModal } from '../ui/ProjectModal';
 import { projects } from '../../constants/project';
 
+
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-        <section id="projects" className="py-32 px-6 lg:px-8 bg-dark scroll-mt-20">
+        <section id="projects" className="px-6 py-32 lg:px-8 bg-dark scroll-mt-20">
             <div className="max-w-6xl mx-auto">
                 <ScrollReveal>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
+                    <h2 className="mb-16 text-4xl font-bold text-center md:text-5xl">
                         Selected <span className="text-primary">Works</span>
                     </h2>
                 </ScrollReveal>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid gap-8 md:grid-cols-2">
                     {projects.map((project, index) => (
                         <ScrollReveal key={project.id} delay={index * 100}>
                             <div
-                                className="project-card bg-dark-light/20 rounded-3xl overflow-hidden hover:transform hover:-translate-y-3 transition-all duration-700 cursor-pointer group border border-white/10 hover:border-primary/50 shadow-2xl backdrop-blur-sm"
+                                className="overflow-hidden transition-all duration-700 border shadow-2xl cursor-pointer project-card bg-dark-light/20 rounded-3xl hover:transform hover:-translate-y-3 group border-white/10 hover:border-primary/50 backdrop-blur-sm"
                                 onClick={() => setSelectedProject(project)}
                             >
-                                <div className="h-72 overflow-hidden relative">
+                                <div className="relative overflow-hidden h-72">
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                                        <span className="px-6 py-2 bg-primary text-dark rounded-full font-bold scale-90 group-hover:scale-100 transition-transform duration-500 shadow-lg">View Case Study</span>
+                                    <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 bg-dark/40 group-hover:opacity-100">
+                                        <span className="px-6 py-2 font-bold transition-transform duration-500 scale-90 rounded-full shadow-lg bg-primary text-dark group-hover:scale-100">View Case Study</span>
                                     </div>
                                 </div>
                                 <div className="p-6">
-                                    <div className="flex justify-between items-start mb-4">
+                                    <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-2xl font-bold mb-1">{project.title}</h3>
-                                            <p className="text-primary font-medium text-xs tracking-widest uppercase">{project.role}</p>
+                                            <h3 className="mb-1 text-2xl font-bold">{project.title}</h3>
+                                            <p className="text-xs font-medium tracking-widest uppercase text-primary">{project.role}</p>
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
