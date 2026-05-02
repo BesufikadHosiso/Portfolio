@@ -15,8 +15,8 @@ export const projects = [
             "Email integration with FormSubmit",
             "Dynamic content management"
         ],
-        liveLink: "https://adelphos-high-school.vercel.app",
-        githubLink: "https://github.com/besufikad17/adelphos-high-school"
+        liveLink: "https://adelphoshighschool.vercel.app",
+        githubLink: "https://github.com/BesuHosiso/adelphos-high-school"
     },
     {
         id: 2,

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BiLinkExternal, BiLogoGithub } from 'react-icons/bi';
+import { BiLinkExternal, BiLogoGithub, BiX } from 'react-icons/bi';
 
 export const ProjectModal = ({ project, onClose }) => {
     useEffect(() => {
@@ -20,17 +20,20 @@ export const ProjectModal = ({ project, onClose }) => {
             onClick={onClose}
         >
             <div
-                className="relative w-full max-w-lg sm:max-w-2xl md:max-w-3xl lg:max-w-4xl bg-dark rounded-3xl p-2 sm:p-6 md:p-10 max-h-[95vh] overflow-y-auto shadow-2xl flex flex-col"
+                className="relative w-full max-w-lg sm:max-w-2xl md:max-w-3xl lg:max-w-4xl bg-dark rounded-3xl max-h-[95vh] shadow-2xl flex flex-col overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
             >
-                                <button
-                                    onClick={onClose}
-                                    className="absolute text-3xl transition top-3 right-3 sm:top-4 sm:right-4 text-text-primary hover:text-primary sm:text-4xl focus:outline-none"
-                                    aria-label="Close modal"
-                                >
-                                    &times;
-                                </button>
+                {/* Stable Close Button */}
+                <button
+                    onClick={onClose}
+                    className="absolute z-50 p-2 transition-all border rounded-full shadow-xl top-3 right-3 sm:top-5 sm:right-5 bg-dark/60 backdrop-blur-md border-white/10 text-text-primary hover:text-primary hover:scale-110 active:scale-95 focus:outline-none"
+                    aria-label="Close modal"
+                >
+                    <BiX className="text-2xl sm:text-3xl" />
+                </button>
 
+                {/* Scrollable Content Container */}
+                <div className="p-4 overflow-y-auto sm:p-8 md:p-10 custom-scrollbar">
                                 <div className="w-full aspect-video min-h-[180px] sm:min-h-[240px] bg-dark-light rounded-xl mb-4 sm:mb-6 overflow-hidden flex items-center justify-center">
                                     {isVideo(project.image) ? (
                                         <video
@@ -100,6 +103,7 @@ export const ProjectModal = ({ project, onClose }) => {
                                         </a>
                                     )}
                                 </div>
+                </div>
             </div>
         </div>
     );
