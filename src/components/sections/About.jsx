@@ -7,11 +7,11 @@ export const About = () => {
     return (
         <section id="about" className="py-32 px-6 lg:px-8 scroll-mt-20">
             <div className="max-w-6xl mx-auto">
-                                <ScrollReveal>
-                                    <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center text-balance">
-                                        About <span className="text-primary">Me</span>
-                                    </h2>
-                                </ScrollReveal>
+                <ScrollReveal>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center text-balance">
+                        About <span className="text-primary">Me</span>
+                    </h2>
+                </ScrollReveal>
 
                 <div className="grid md:grid-cols-2 gap-16 items-start">
                     <ScrollReveal delay={100}>
@@ -44,11 +44,11 @@ export const About = () => {
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
-                                                        {['React / Next.js', 'Tailwind CSS v4', 'Framer Motion', 'Node.js', 'TypeScript', 'UI/UX Design'].map((skill) => (
-                                                            <div key={skill} className="flex items-center gap-2 text-text-secondary">
-                                                                <BiCheckCircle className="text-primary text-lg" /> {skill}
-                                                            </div>
-                                                        ))}
+                            {['React / Next.js', 'Tailwind CSS v4', 'Framer Motion', 'Node.js', 'TypeScript', 'UI/UX Design'].map((skill) => (
+                                <div key={skill} className="flex items-center gap-2 text-text-secondary">
+                                    <BiCheckCircle className="text-primary text-lg" /> {skill}
+                                </div>
+                            ))}
                         </div>
 
                         <SocialLinks className="pt-6" />
