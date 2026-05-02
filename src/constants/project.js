@@ -1,4 +1,4 @@
-import projectShow from '../../assets/adelphosHome.webm';
+import projectShow from '../assets/adelphosHome.webm';
 
 export const projects = [
     {
