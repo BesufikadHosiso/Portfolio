@@ -9,6 +9,11 @@ export const ProjectModal = ({ project, onClose }) => {
         };
     }, []);
 
+    // Helper to check if the media source is a video
+    const isVideo = (src) => {
+        return typeof src === 'string' && (src.toLowerCase().endsWith('.webm') || src.toLowerCase().endsWith('.mp4'));
+    };
+
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center p-1 sm:p-4 bg-dark/95 backdrop-blur-xl"
@@ -20,26 +25,37 @@ export const ProjectModal = ({ project, onClose }) => {
             >
                                 <button
                                     onClick={onClose}
-                                    className="absolute top-3 right-3 sm:top-4 sm:right-4 text-text-primary hover:text-primary text-3xl sm:text-4xl transition focus:outline-none"
+                                    className="absolute text-3xl transition top-3 right-3 sm:top-4 sm:right-4 text-text-primary hover:text-primary sm:text-4xl focus:outline-none"
                                     aria-label="Close modal"
                                 >
                                     &times;
                                 </button>
 
                                 <div className="w-full aspect-video min-h-[180px] sm:min-h-[240px] bg-dark-light rounded-xl mb-4 sm:mb-6 overflow-hidden flex items-center justify-center">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title || 'Project image'}
-                                        className="w-full h-full object-cover"
-                                        style={{ minHeight: '100px', background: '#222' }}
-                                        onError={e => { e.target.style.display = 'none'; }}
-                                    />
+                                    {isVideo(project.image) ? (
+                                        <video
+                                            src={project.image}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="object-cover w-full h-full"
+                                        />
+                                    ) : (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title || 'Project image'}
+                                            className="object-cover w-full h-full"
+                                            style={{ minHeight: '100px', background: '#222' }}
+                                            onError={e => { e.target.style.display = 'none'; }}
+                                        />
+                                    )}
                                     {/* Fallback if image fails */}
-                                    <span className="absolute text-text-secondary text-xs sm:text-base opacity-70 select-none pointer-events-none" style={{display:'none'}}>Image unavailable</span>
+                                    <span className="absolute text-xs pointer-events-none select-none text-text-secondary sm:text-base opacity-70" style={{display:'none'}}>Image unavailable</span>
                                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-text-primary leading-tight break-words">{project.title}</h2>
-                <p className="text-primary mb-4 text-xs sm:text-sm md:text-base font-medium tracking-wide">{project.role}</p>
+                <h2 className="mb-1 text-2xl font-bold leading-tight break-words sm:text-3xl md:text-4xl sm:mb-2 text-text-primary">{project.title}</h2>
+                <p className="mb-4 text-xs font-medium tracking-wide text-primary sm:text-sm md:text-base">{project.role}</p>
 
                                 <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                                     {project.tech.map((tech, idx) => (
@@ -49,12 +65,12 @@ export const ProjectModal = ({ project, onClose }) => {
                                     ))}
                                 </div>
 
-                <p className="text-text-secondary leading-relaxed mb-4 sm:mb-6 text-xs sm:text-base">{project.description}</p>
+                <p className="mb-4 text-xs leading-relaxed text-text-secondary sm:mb-6 sm:text-base">{project.description}</p>
 
                                 {project.features && (
                                     <div className="mb-4 sm:mb-6">
-                                        <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-text-primary">Key Features</h3>
-                                        <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-text-secondary text-xs sm:text-sm md:text-base pl-4">
+                                        <h3 className="mb-2 text-base font-semibold sm:text-lg md:text-xl sm:mb-3 text-text-primary">Key Features</h3>
+                                        <ul className="pl-4 space-y-1 text-xs list-disc list-inside sm:space-y-2 text-text-secondary sm:text-sm md:text-base">
                                             {project.features.map((feature, idx) => (
                                                 <li key={idx}>{feature}</li>
                                             ))}
@@ -62,13 +78,13 @@ export const ProjectModal = ({ project, onClose }) => {
                                     </div>
                                 )}
 
-                                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 sm:mt-4 w-full">
+                                <div className="flex flex-col w-full gap-2 mt-2 sm:flex-row sm:gap-4 sm:mt-4">
                                     {project.liveLink && (
                                         <a
                                             href={project.liveLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-dark font-semibold rounded-lg shadow-lg hover:bg-primary-light transition transform hover:scale-105 text-sm sm:text-base md:text-lg"
+                                            className="flex items-center justify-center flex-1 gap-2 px-4 py-2 text-sm font-semibold transition transform rounded-lg shadow-lg sm:px-6 sm:py-3 bg-primary text-dark hover:bg-primary-light hover:scale-105 sm:text-base md:text-lg"
                                         >
                                             <BiLinkExternal className="text-lg sm:text-xl" /> Live Demo
                                         </a>
@@ -78,7 +94,7 @@ export const ProjectModal = ({ project, onClose }) => {
                                             href={project.githubLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border-2 border-primary text-primary font-semibold rounded-lg shadow-lg hover:bg-primary/10 transition transform hover:scale-105 text-sm sm:text-base md:text-lg"
+                                            className="flex items-center justify-center flex-1 gap-2 px-4 py-2 text-sm font-semibold transition transform border-2 rounded-lg shadow-lg sm:px-6 sm:py-3 border-primary text-primary hover:bg-primary/10 hover:scale-105 sm:text-base md:text-lg"
                                         >
                                             <BiLogoGithub className="text-lg sm:text-xl" /> GitHub
                                         </a>
