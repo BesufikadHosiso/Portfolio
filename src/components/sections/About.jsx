@@ -1,6 +1,7 @@
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { SocialLinks } from '../common/SocialLinks';
 import { BiCheckCircle } from 'react-icons/bi';
+import profileImg from '../../assets/besudev.jpg';
 
 export const About = () => {
     return (
@@ -17,7 +18,7 @@ export const About = () => {
                         <div className="relative">
                             <div className="aspect-4/5 rounded-3xl overflow-hidden border border-white/10 p-2 bg-dark-light shadow-2xl">
                                 <img
-                                    src="/besudev.jpg"
+                                    src={profileImg}
                                     alt="Besufikad Hosiso"
                                     className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 shadow-lg"
                                 />
