@@ -7,6 +7,11 @@ import { projects } from '../../constants/project';
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
+    // Helper to check if the media source is a video
+    const isVideo = (src) => {
+        return typeof src === 'string' && (src.toLowerCase().endsWith('.webm') || src.toLowerCase().endsWith('.mp4'));
+    };
+
     return (
         <section id="projects" className="px-6 py-32 lg:px-8 bg-dark scroll-mt-20">
             <div className="max-w-6xl mx-auto">
@@ -24,11 +29,23 @@ export const Projects = () => {
                                 onClick={() => setSelectedProject(project)}
                             >
                                 <div className="relative overflow-hidden h-72">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                    {isVideo(project.image) ? (
+                                        <video
+                                            src={project.image}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    ) : (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    )}
+
                                     <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 bg-dark/40 group-hover:opacity-100">
                                         <span className="px-6 py-2 font-bold transition-transform duration-500 scale-90 rounded-full shadow-lg bg-primary text-dark group-hover:scale-100">View Case Study</span>
                                     </div>
