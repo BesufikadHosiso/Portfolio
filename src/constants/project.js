@@ -20,19 +20,20 @@ export const projects = [
     },
     {
         id: 2,
-        title: "Passport Registration Agency",
-        role: "Frontend Developer",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        tech: ["React", "Tailwind CSS", "Payment Integration (Coming)", "Live Call Support"],
-        description: "A modern passport registration platform for an agency in Addis Ababa, Ethiopia. Users can submit personal information, upload photos, schedule live calls with agents, and complete payments (coming soon). The frontend is fully responsive and live, with real-time form validation and a seamless user experience.",
+        title: "Dollar Birr Tracker",
+        role: "Frontend Developer (with Real-time API Integration)",
+        image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=600&q=80",
+        tech: ["JavaScript", "HTML", "CSS", "Real-time APIs", "Responsive Design"],
+        description: "A dedicated real-time dashboard designed to bridge the information gap in the currency market. It allows users to monitor the fluctuating exchange rate between the United States Dollar (USD) and the Ethiopian Birr (ETB) instantly using real-time APIs. This project provides clarity by comparing live market trends with official banking rates within a modern, responsive interface.",
         features: [
-            "Multi-step form with validation",
-            "File upload functionality",
-            "Live call scheduling system",
-            "Payment integration (in development)",
-            "User dashboard (coming soon)"
+            "Real-time exchange rate updates",
+            "Interactive market trend visualization",
+            "Parallel vs. Official rate comparison",
+            "Quick USD to ETB converter",
+            "Daily statistics (High/Low/Change)",
+            "Market insights and summaries"
         ],
-        liveLink: "https://passport-registration.vercel.app",
-        githubLink: "https://github.com/besufikad17/passport-registration"
+        liveLink: "https://besuhosiso.github.io/dollar-birr-tracker/",
+        githubLink: "https://github.com/BesuHosiso/dollar-birr-tracker"
     }
 ];
