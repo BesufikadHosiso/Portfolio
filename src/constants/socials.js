@@ -11,12 +11,12 @@ export const socials = [
     },
     {
         name: 'YouTube',
-        url: 'https://youtube.com/@besu-hosiso',
+        url: 'https://youtube.com/@bh_ships?si=dAYPe7ByALqkhEzc',
         icon: 'BiLogoYoutube',
     },
     {
         name: 'TikTok',
-        url: 'https://www.tiktok.com/@besu_hosiso1',
+        url: 'https://www.tiktok.com/@bh_ships_',
         icon: 'BiLogoTiktok',
     },
 ];
