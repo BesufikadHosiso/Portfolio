@@ -16,7 +16,7 @@ export const projects = [
             "Dynamic content management"
         ],
         liveLink: "https://adelphoshighschool.vercel.app",
-        githubLink: "https://github.com/BesuHosiso/adelphos-high-school"
+        githubLink: "https://github.com/besufikadhosiso/adelphos-high-school"
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ export const projects = [
             "Daily statistics (High/Low/Change)",
             "Market insights and summaries"
         ],
-        liveLink: "https://besuhosiso.github.io/dollar-birr-tracker/",
-        githubLink: "https://github.com/BesuHosiso/dollar-birr-tracker"
+        liveLink: "https://besufikadhosiso.github.io/dollar-birr-tracker/",
+        githubLink: "https://github.com/besufikadhosiso/dollar-birr-tracker"
     }
 ];

@@ -1,7 +1,7 @@
 export const socials = [
     {
         name: 'GitHub',
-        url: 'https://github.com/BesuHosiso',
+        url: 'https://github.com/besufikadhosiso',
         icon: 'BiLogoGithub',
     },
     {
