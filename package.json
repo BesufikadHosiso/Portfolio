@@ -2,7 +2,7 @@
   "name": "besufikad-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://BesuHosiso.github.io/BesufikadHosiso",
+  "homepage": "https://besufikadhosiso.github.io/Portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
