@@ -44,7 +44,7 @@ export const About = () => {
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
-                            {['React / Next.js', 'Tailwind CSS v4', 'Framer Motion', 'Node.js', 'TypeScript', 'UI/UX Design'].map((skill) => (
+                            {['JavaScript (done)', 'React (Learning...)', 'Tailwind CSS v4 (done)', 'Next.js (soon...)', 'TypeScript (soon...)', 'UI/UX Design (Almost done)'].map((skill) => (
                                 <div key={skill} className="flex items-center gap-2 text-text-secondary">
                                     <BiCheckCircle className="text-lg text-primary" /> {skill}
                                 </div>
