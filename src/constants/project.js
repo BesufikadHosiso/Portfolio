@@ -1,4 +1,5 @@
 import projectShow from '../assets/adelphosHome.webm';
+import levelgitDemo from '../assets/levelgit-demo.webm';
 
 export const projects = [
     {
@@ -35,5 +36,23 @@ export const projects = [
         ],
         liveLink: "https://besufikadhosiso.github.io/dollar-birr-tracker/",
         githubLink: "https://github.com/besufikadhosiso/dollar-birr-tracker"
-    }
+    },
+    {
+    id: 3,
+    title: "LevelGit",
+    role: "Full Stack Frontend Developer (React + State Architecture)",
+    image: levelgitDemo,
+    tech: ["React 19", "Tailwind CSS v4", "React Router", "Context API", "useReducer", "localStorage"],
+    description: "A developer productivity and learning consistency app built for software developers who keep starting over. LevelGit combines a GitHub-style coding streak tracker, a distraction-free focus timer, a personal commit log, growth stats, and a learning path tracker into one daily habit. Built entirely with React and Tailwind CSS — no backend, no database, no account required. The global state is managed with AppContext using useReducer and persisted automatically through localStorage, making the app fully offline-capable.",
+    features: [
+        "GitHub-style streak heatmap tracking daily learning consistency",
+        "Mood-aware focus timer — adapts session length to how you feel",
+        "Personal commit log — write one insight per session, build your learning memory",
+        "Growth stats with stack breakdown — derived entirely from existing state",
+        "Learning path tracker with milestone progress bars",
+        "LocalStorage — zero backend, data persists via localStorage"
+    ],
+    liveLink: "https://levelgit.vercel.app",
+    githubLink: "https://github.com/besufikadhosiso/levelgit"
+},
 ];
