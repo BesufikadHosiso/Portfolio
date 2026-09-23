@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const roles = ["Frontend Developer", "Content Creator", "Full Stack Developer", "UI/UX Enthusiast", "Problem Solver"];
+const roles = ["Full Stack Developer", "Content Creator", "Full Stack Developer", "UI/UX Enthusiast", "Problem Solver"];
 
 export const TypingAnimation = () => {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
