@@ -32,7 +32,7 @@ export const Hero = () => {
 
                 <ScrollReveal delay={200}>
                     <p className="text-lg md:text-xl lg:text-2xl mb-10 text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                        Hi, I'm Besufikad Hosiso, a frontend developer who turns messy, complex ideas into smooth, user‑friendly web experiences using clean code and modern design — so your customers stay longer, buy more, and your business grows without the headache.
+                        Hi, I'm Besufikad Hosiso, a full stack developer who turns messy, complex ideas into smooth, user‑friendly web experiences using clean code and modern design — so your customers stay longer, buy more, and your business grows without the headache.
                     </p>
                 </ScrollReveal>
 
