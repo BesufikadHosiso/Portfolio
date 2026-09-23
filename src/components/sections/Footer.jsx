@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <SocialLinks className="mb-6 justify-center" />
         <p className="text-sm tracking-wide">
-          &copy; {currentYear} Frontend Developer Portfolio by Besufikad Hosiso.
+          &copy; {currentYear} Full Stack Developer Portfolio by Besufikad Hosiso.
         </p>
         <p className="text-xs mt-2 opacity-70 flex items-center justify-center gap-1">
           Made with passion for simple, modern websites.
