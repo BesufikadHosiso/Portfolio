@@ -30,12 +30,12 @@ export const About = () => {
                     <ScrollReveal delay={200} className="max-w-xl space-y-12">
                         <div>
                             <h3 className="mb-8 text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl text-balance">
-                                I take messy problems and hand you clean, working solutions.
+                                I take messy problems and hand you complete, working systems.
                             </h3>
 
                             <div className="space-y-6 text-lg leading-relaxed text-slate-300">
                                 <p>
-                                    Writing code is the easy part. The real work is understanding what a business actually needs — then building a solution that feels <b className="font-semibold text-slate-100">effortless to use</b>. I've taken messy, unclear requests from founders and turned them into clean, working web experiences. Not because I know every framework, but because I listen first, think carefully, and solve the problem that's actually in front of me.
+                                    Writing code is the easy part. The real work is understanding what a business actually needs — then building something that works end to end, from how data moves behind the scenes to how it feels in someone's hands. I've taken messy, unclear requests from founders and turned them into full products: the interface, the logic, the data underneath it — all working together. Not because I know every framework, but because I listen first, think carefully, and solve the problem that's actually in front of me.
                                 </p>
                                 <p>
                                     You don't need a developer who just follows orders. You need someone who <b className="font-semibold text-slate-100">cares about your results</b> as much as you do. That's me. One year in, many real‑world problems solved — and I'm just getting started. Let's talk about what you need.
@@ -44,7 +44,7 @@ export const About = () => {
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
-                            {['JavaScript', 'React', 'Tailwind CSS v4', 'Next.js', 'TypeScript', 'UI/UX Design', 'Firebase', 'Supabase', 'Express.js'].map((skill) => (
+                            {['JavaScript', 'React', 'Tailwind CSS v4', 'Next.js', 'TypeScript', 'Firebase & Supabase', 'Express.js'].map((skill) => (
                                 <div key={skill} className="flex items-center gap-2 text-text-secondary">
                                     <BiCheckCircle className="text-lg text-primary" /> {skill}
                                 </div>

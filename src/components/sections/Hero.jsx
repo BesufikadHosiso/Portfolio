@@ -26,13 +26,13 @@ export const Hero = () => {
 
                 <ScrollReveal delay={150}>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-none tracking-tighter text-primary">
-                       I Build Custom, High-Speed Sites That Increase Revenue And Streamline.
+                       I Build Custom, Full-Stack Products That Increase Revenue And Scale With Your Business.
                     </h1>
                 </ScrollReveal>
 
                 <ScrollReveal delay={200}>
                     <p className="text-lg md:text-xl lg:text-2xl mb-10 text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                        Hi, I'm Besufikad Hosiso, a full stack developer who turns messy, complex ideas into smooth, user‑friendly web experiences using clean code and modern design — so your customers stay longer, buy more, and your business grows without the headache.
+                        Hi, I'm Besufikad Hosiso, a full stack developer who turns messy, complex ideas into complete, working products — from the database to the interface — using clean code and modern design, so your customers stay longer, buy more, and your business runs on something solid, not held together with duct tape.
                     </p>
                 </ScrollReveal>
 
