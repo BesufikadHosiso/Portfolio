@@ -43,7 +43,7 @@ export const About = () => {
                             </div>
                         </div>
                         
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {['JavaScript', 'React', 'Tailwind CSS v4', 'Next.js', 'TypeScript', 'Firebase & Supabase', 'Express.js'].map((skill) => (
                                 <div key={skill} className="flex items-center gap-2 text-text-secondary">
                                     <BiCheckCircle className="text-lg text-primary" /> {skill}

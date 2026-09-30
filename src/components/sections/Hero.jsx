@@ -25,7 +25,7 @@ export const Hero = () => {
                 </ScrollReveal>
 
                 <ScrollReveal delay={150}>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-none tracking-tighter text-primary">
+                    <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold mb-6 leading-tight tracking-tighter text-primary">
                        I Build Custom, Full-Stack Products That Increase Revenue And Scale With Your Business.
                     </h1>
                 </ScrollReveal>
@@ -37,7 +37,7 @@ export const Hero = () => {
                 </ScrollReveal>
 
                 <ScrollReveal delay={300}>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <div className="flex flex-row flex-wrap gap-4 justify-center mb-12">
                         <Button icon={BiCodeAlt} onClick={() => scrollToSection('projects')}>
                             View Selected Works
                         </Button>
