@@ -1,12 +1,13 @@
 import projectShow from '../assets/adelphosHome.webm';
 import levelgitDemo from '../assets/levelgit-demo.webm';
+import habeshaskills from '../assets/habeshaskills.webm';
 
 export const projects = [
     {
         id: 1,
         title: "HabeshaSkills",
         role: "Full Stack Developer",
-        image: "",
+        image: habeshaskills,
         tech: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Supabase (Postgres, Auth, Realtime)", "Server Actions"],
         description: "A venture-building platform connecting Ethiopian traditional-skill practitioners with the youth builders and investors who can turn their knowledge into real ventures. Unlike a course platform or job board, HabeshaSkills routes real problems through a structured pipeline — submitted, validated, built, and funded — with three fully separate role-based experiences for Practitioners, Youth, and Investors. Built solo from the database up: a designed Postgres schema with row-level security, server-side auth with Server Actions, and real-time team chat, all running on Next.js and Supabase.",
         features: [
